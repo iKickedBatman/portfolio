@@ -1,0 +1,229 @@
+*,
+*::before,
+*::after {
+    /* margin: 0;
+    padding: 0; */
+    box-sizing: border-box; /* using this as it changes how padding is calculated to make it within a width, instead of adding it onto the total width of something. */
+    list-style: none;
+}
+
+/* Custom properties */
+
+:root {
+     /* font family */
+    --ff-yan: 'Yanone Kaffeesatz', sans-serif; 
+     /* font weight */
+    --fw-reg: 300;
+    --fw-bold: 900;
+    /* color  */
+    --clr-light: #67b9fe;
+    --clr-dark: #3b016f;
+    --clr-accent: #eb01c3;
+    /* font size */
+    --fs-h1: 3rem;
+    --fs-h2: 2.25rem;
+    --fs-h3: 1.25rem;
+    --fs-body: 1.1rem;
+
+    /* --bs: 0.25em 0.25em 0.75em rgba(219, 116, 140, 0.8757878151260504),
+          0.125em 0.125em 0.25em rgba(219, 116, 140, 0.8757878151260504); */
+
+    --bs: 0.25em 0.25em 0.75em #0ff;
+}
+
+@media (min-width: 800px) {
+    :root {
+        --fs-h1: 4.5rem;
+        --fs-h2: 3.75rem;
+        --fs-h3: 1.5rem;
+        --fs-body: 1.125rem;
+    }
+}
+
+/* General styles */
+
+body {
+    background-image: url(../images/big_swiper_5.jpg);
+    background-size: cover;
+    background-attachment: fixed;
+    margin: 0;
+    font-family: var(--ff-yan);
+    font-size: var(--fs-body);
+    line-height: 1.6;
+}
+
+section{
+    padding: 5em 2em;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+}
+
+:focus {
+    outline: 3px solid var(--clr-accent);
+    outline-offset: 3px;
+}
+
+.btn {
+    display: inline-block;
+    padding: .5em 2.5em;
+    background: var(--clr-accent);
+    color: var(--clr-dark);
+    text-decoration: none;
+    cursor: pointer;
+    font-size: .8rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-weight: var(--fw-bold);
+    transition: transform 200ms ease-in-out;
+}
+
+.btn:hover {
+    transform: scale(1.1);
+}
+
+/* Typography */
+
+strong { font-weight: var(--fw-bold) }
+
+h1, h2, h3 {
+    line-height: 1;
+    margin: 0;    
+}
+
+h1 { font-size: var(--fs-h1) }
+h2 { font-size: var(--fs-h2) }
+h3 { font-size: var(--fs-h3) }
+
+
+.section__title{
+    margin-bottom: .25em;
+    margin-top: .15em;
+
+}
+
+.section__title--intro {
+    font-weight: var(--fw-reg);
+}
+
+.section__title--intro strong{
+    display: block;
+}
+
+.section__subtitle{
+    margin: 0;
+    font-size: var(--fs-h3);
+}
+
+.section__subtitle--intro,
+.section__subtitle--about {
+    background: var(--clr-accent);
+    padding: .25em .50em;
+    font-family: var(--ff-yan);
+    font-size: 2.1rem;
+    margin-bottom: 1em;
+}
+
+/* header */
+
+nav { display: none; }
+
+/* intro section */
+
+.intro {
+    position: relative;
+}
+
+.intro__img {
+    box-shadow: var(--bs);
+}
+
+@media (min-width: 600px) {
+    .intro {
+        display: grid;
+        width: min-content;
+        margin: 0 auto;
+        grid-column-gap: 1em;
+        /* column-gap: 1em; */
+        grid-template-areas:
+            "img title"
+            "img subtitle";
+        grid-template-columns: min-content max-content;
+    }
+
+    .intro__img {
+        grid-area: img;
+        min-width: 250px;
+        position: relative;
+        z-index: 2;
+    }
+
+    .section__subtitle--intro {
+        align-self: start;
+        grid-column: -1 / 1;
+        grid-row: 2;
+        text-align: right;
+        position: relative;
+        left: -1.5em;
+        width: calc(100% + 1.5em);
+    }
+
+}
+
+
+/* My services section  */
+
+.my-services {
+    background: rgb(214,126,176);
+    background: linear-gradient(117deg,
+                rgba(214,126,176,0.8757878151260504) 5%, 
+                rgba(208,99,156,0.8757878151260504) 18%, 
+                rgba(199,111,161,0.8757878151260504) 37%, 
+                rgba(216,117,171,0.8757878151260504) 46%, 
+                rgba(219,133,172,0.8757878151260504) 52%, 
+                rgba(229,144,173,0.8757878151260504) 62%, 
+                rgba(237,168,161,0.8757878151260504) 68%, 
+                rgba(227,155,169,0.8757878151260504) 85%, 
+                rgba(229,143,182,0.8757878151260504) 100%);
+    color: var(--clr-dark);
+    text-align: center;
+}
+
+.section__title--services{
+    color: var(--clr-light);
+    position: relative;
+}
+
+.section__title--services::after{
+    content: '';
+    display: block;
+    width: 2em;
+    height: 1px;
+    margin: 0.5em auto 1em;
+    background: currentColor;
+    opacity: 0.5;
+}
+
+.services{
+    margin-bottom: 4em;
+}
+
+.service {
+    width: 500px;
+    margin: 0 auto;
+}
+
+@media (min-width: 800px) {
+    .services {
+        display: flex;
+        max-width: 1000px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .service + .service {
+        margin-left: 2em;
+    }
+}
