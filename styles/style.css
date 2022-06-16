@@ -177,6 +177,7 @@ nav { display: none; }
 .about-me {
     max-width: 1000px;
     margin: 0 auto;
+    font-weight: var(fw);
 }
 
 .about-me__img{
@@ -205,7 +206,8 @@ nav { display: none; }
         left: -1em;
         width: calc(100% + 2em);
         padding-left: 1em;
-        padding-right: calc(200px + 4em);
+        padding-right: calc(200px + 3em);
+        margin-bottom: 0.1em;
     }
 
     .about-me__img {
