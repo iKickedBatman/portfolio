@@ -9,18 +9,13 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Yanone+Kaffeesatz:wght@200;300;400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/2564a24a97.js" crossorigin="anonymous"></script>
     <script src="scripts/script.js" defer></script>
-
-
 </head>
 <body class="main-content">
     <header class="section sec1 header active">
-       
-        <!-- <div class ="logo">
-            <img src="images/devDan_logo1.png" alt="">
-        </div> -->
         
-        <button class="nav-toggle" aria-label="toggle navigation">
+        <!-- <button class="nav-toggle" aria-label="toggle navigation">
             <span class = "hamburger"></span>
         </button>
         
@@ -31,7 +26,7 @@
                  <li class="nav__item"><a href="about" class= "nav__link"> 3 </a></li>
                  <li class="nav__item"><a href="work" class= "nav__link"> 4 </a></li>
             </ul>
-        </nav>
+        </nav> -->
         
     </header>
 
@@ -47,7 +42,7 @@
     <!-- about me -->
     <section class="about-me" id="about">
         <h2 class="section__title section__title--about"> About Me</h2>
-        <p class="section__subtitle section__subtitle--about">| Leader | Efficient | Tactical | Empathetic | Strategic | ENTJ-T |</p>
+        <p class="section__subtitle section__subtitle--about">&nbsp;&nbsp; | Leader | Efficient | Tactical | Empathetic | Strategic | ENTJ-T |</p>
 
         <div class="about-me__body">
             <p>
@@ -61,9 +56,23 @@
             </p>
         </div>
 
-        <img src="images/DevDanFull.jpeg" alt="full dan" class="about-me__img">
-        <a href="CV" class="btn"> My CV </a>
+        <img src="images/DevDanFull.jpeg" alt="full dan" class="about-me__img">        
     </section>
+
+    <!-- <div>
+        <p> View CV </p>
+    </div> -->
+    <!-- <button id = "cv-btn" onclick="viewCV()"> View CV</button> -->
+
+
+    <!-- <button class="cv-btn"> View CV </button>
+    <div class="modal">
+        <div class="cv__modal">
+            <span class="close">&times;</span>
+            <img src="/images/Daniyal_Shafique_CV.png" alt="Dan's CV" class="cv__modal--img">
+        </div>
+    </div> -->
+      
 
     <!-- main -->
     <section class="my-services" id="services">
@@ -114,40 +123,38 @@
 
         </div> <!-- services -->
 
-        <!-- <a href="work" class="btn"> My Work </a> -->
-
         <section class="my-work" id="work">
             <!-- <h2 class="section__title section__title--work"> My work</h2> -->
-            <p class="section__subtitle section__subtitle--work">Click on an image to view the associated project</p>
+            <p class="section__subtitle section__subtitle--work"> Click on an image to view the associated project </p>
     
             <div class="portfolio">
-                <!-- Portfolio item 01 -->
-                <a href="#" class="portfolio__item">
+                <!-- Portfolio item 01 Responsive Layout -->
+                <a href="https://ikickedbatman.github.io/ResponsiveLayout/" target="_blank" class="portfolio__item">
                     <img src="images/ResponsiveLayout.png" alt="" class="portfolio__img">
                 </a>
     
-                <!-- Portfolio item 02 -->
-                <a href="#" class="portfolio__item">
+                <!-- Portfolio item 02 Boxgen -->
+                <a href="https://ikickedbatman.github.io/Boxgen/"  target="_blank" class="portfolio__item">
                     <img src="images/Boxgen.png" alt="" class="portfolio__img">
                 </a>
     
-                <!-- Portfolio item 03 -->
-                <a href="#" class="portfolio__item">
+                <!-- Portfolio item 03 Basketball Game-->
+                <a href="https://ikickedbatman.github.io/basketball/" target = "_blank" class="portfolio__item">
                     <img src="images/Basketball.png" alt="" class="portfolio__img">
                 </a>
     
-                <!-- Portfolio item 04 -->
-                <a href="#" class="portfolio__item">
+                <!-- Portfolio item 04 Pet Rescue CRUD TS Form-->
+                <a href="https://ikickedbatman.github.io/Practical_TS_Form/" target = "_blank" class="portfolio__item">
                     <img src="images/Form.png" alt="" class="portfolio__img">
                 </a>
     
                 <!-- Portfolio item 05 -->
-                <a href="#" class="portfolio__item">
+                <a href="#" target = "_blank" class="portfolio__item">
                     <img src="images/Placeholder.png" alt="" class="portfolio__img">
                 </a>
     
                 <!-- Portfolio item 06 -->
-                <a href="#" class="portfolio__item">
+                <a href="#" target = "_blank" class="portfolio__item">
                     <img src="images/Placeholder.png" alt="" class="portfolio__img">
                 </a>
                 
@@ -155,57 +162,32 @@
         </section>
 
      </section>
-
-
-
-    <!-- My Work -->
-    
-    <!-- <section class="my-work" id="work">
-        <h2 class="section__title section__title--work"> My work</h2>
-        <p class="section__subtitle section__subtitle--work">Click on an image to view the associated project</p>
-
-        <div class="portfolio">
-            
-            <a href="#" class="portfolio__item">
-                <img src="images/ResponsiveLayout.png" alt="" class="portfolio__img">
-            </a>
-
-           
-            <a href="#" class="portfolio__item">
-                <img src="images/Boxgen.png" alt="" class="portfolio__img">
-            </a>
-
-            
-            <a href="#" class="portfolio__item">
-                <img src="images/Basketball.png" alt="" class="portfolio__img">
-            </a>
-
-            
-            <a href="#" class="portfolio__item">
-                <img src="images/Form.png" alt="" class="portfolio__img">
-            </a>
-
-            
-            <a href="#" class="portfolio__item">
-                <img src="images/Placeholder.png" alt="" class="portfolio__img">
-            </a>
-
-            
-            <a href="#" class="portfolio__item">
-                <img src="images/Placeholder.png" alt="" class="portfolio__img">
-            </a>
-            
-        </div>
-    </section>  -->
     
     <!-- footer -->
-    <footer>
-        <a href="mailto:hello@jane.dev" class="footer__link">dan email </a>
+    <footer class="footer">
+        <a href="mailto:Dan_S3@outlook.com" class="footer__link">Email: Dan_S3@outlook.com </a>
+        <p class="footer__link">Mobile: 07449170633</p>
         <ul class="social-list">
-            <li class="social-list__item"><a class="social-list__link" href="#">A</a></li>
-            <li class="social-list__item"><a class="social-list__link" href="#">B</a></li>
-            <li class="social-list__item"><a class="social-list__link" href="#">C</a></li>
-            <li class="social-list__item"><a class="social-list__link" href="#">D</a></li>
+            <li class="social-list__item">
+                <a class="social-list__link" href="https://github.com/iKickedBatman">
+                    <i class="fa-brands fa-github-square"></i>
+                </a>
+            </li>
+            <li class="social-list__item">
+                <a class="social-list__link" href="https://www.linkedin.com/in/dan-shafique3/">
+                    <i class="fa-brands fa-linkedin"></i>
+                </a>
+            </li>
+            <!-- <li class="social-list__item">
+                <a class="social-list__link" href="#">
+                    C
+                </a>
+            </li>
+            <li class="social-list__item">
+                <a class="social-list__link" href="#">
+                    D
+                </a>
+            </li> -->
         </ul>
     </footer>
 
