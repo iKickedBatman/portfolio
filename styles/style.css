@@ -413,14 +413,15 @@ nav { display: none; }
 .social-list {
     display: flex;
     justify-content: center;
-    margin: 1em 0 0;
+    margin: 0.1em 0 0;
     padding: 0;
 }
 
 .social-list__item {
-    margin: 0 .5em;
+    margin: 0 .3em;
 }
 
 .social-list__link {
-    padding: .5em;
+    padding: .3em;
+    font-size: 2.7rem;
 }
