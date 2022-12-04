@@ -1,4 +1,4 @@
-let coll = document.getElementsByClassName("btn");
+let coll = document.getElementsByClassName("cv-btn");
 let i;
 
 for (i = 0; i < coll.length; i++) {
@@ -14,7 +14,7 @@ for (i = 0; i < coll.length; i++) {
 }
 
 
-let btn = document.getElementById("cv-btn")
+let btn = document.getElementsByClassName("cv-btn")
 // btn.innerText = "View CV"
 document.body.appendChild(btn)
 btn.addEventListener("click", viewCV)
